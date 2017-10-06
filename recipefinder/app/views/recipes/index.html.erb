@@ -1,5 +1,7 @@
 <h1>Searching for - <%= @search_term %></h1>
-<% unless params[:search].nil? %>
+<%if @recipes.nil? %>
+<p>Try a new search.</p>
+<% else %>
     <table border="1">
         <tr>
             <th>Thumbnail</th>
